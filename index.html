@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightning Jobs</title>
+</head>
+<body>
+    <h1>Lighting JosbPost a Job</h1>
+    <form id="jobPostForm">
+        <label for="jobTitle">Job Title:</label>
+        <input type="text" id="jobTitle" name="jobTitle" required><br>
+
+        <label for="companyName">Company Name:</label>
+        <input type="text" id="companyName" name="companyName" required><br>
+
+        <label for="jobDescription">Job Description:</label><br>
+        <textarea id="jobDescription" name="jobDescription" rows="4" cols="50" required></textarea><br>
+
+        <label for="contactEmail">Contact Email:</label>
+        <input type="email" id="contactEmail" name="contactEmail" required><br>
+
+        <label for="jobLocation">Job Location:</label>
+        <input type="text" id="jobLocation" name="jobLocation" required><br>
+
+        <input type="submit" value="Post Job">
+    </form>
+
+    <script>
+        document.getElementById("jobPostForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            for (const [key, value] of formData.entries()) {
+                console.log(key, value);
+            }
+        });
+    </script>
+</body>
+</html>
