@@ -4,7 +4,7 @@ Proof of Concept for Lightning Jobs
 
 ## How works?
 
-TBD
+We'll use NIP-99 as main base
 
 ## Demo Video
 
